@@ -6,12 +6,12 @@ include("./utils/rest.php");
 header("Content-type: image/png");
 
 // Open the layout for later use
-$im = imagecreatefrompng("layout.png");
+$im = imagecreatefrompng("./assets/layout.png");
 
 // TODO Fetch the Jeedom API
 
 // Iterate over the Structure and map it with the API return data and write it into the image
-foreach($struct as $curr){
+foreach($IMAGE_STRUCTURE as $curr){
 	writeText($im, $curr['data'], $curr['x'], $curr['y'], $curr['size'], $curr['font']);
 }
 
