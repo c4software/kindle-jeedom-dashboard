@@ -1,3 +1,3 @@
-# Kindle Jeedom Dashboard
+# Kobo Jeedom Dashboard
 
 Early WIP project
