@@ -1,5 +1,6 @@
 <?php
 
+
 // Font definition 
 $FONT_REGULAR = 'fonts/OpenSans-Regular.ttf';
 
