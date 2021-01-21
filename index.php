@@ -6,16 +6,18 @@ include("./utils/rest.php");
 header("Content-type: image/png");
 
 // Open the layout for later use
-$im = imagecreatefrompng("./assets/layout.png");
+$im = imagecreatefrompng("layout.png");
 
 // TODO Fetch the Jeedom API
 
 // Iterate over the Structure and map it with the API return data and write it into the image
-foreach($IMAGE_STRUCTURE as $curr){
+foreach($struct as $curr){
 	writeText($im, $curr['data'], $curr['x'], $curr['y'], $curr['size'], $curr['font']);
 }
 
-imagepng($im);
-imagedestroy($im);
+$rotate = imagerotate($im, 90, 0);
+imagepng($rotate);
 
+imagedestroy($rotate);
+imagedestroy($im);
 ?>
